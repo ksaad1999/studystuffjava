@@ -38,5 +38,22 @@ public class OnlineShop {
         float aktienkurs = 462.23f;
         boolean istGeprueft = true;
         String name = "Schulz";
+
+
+        //Code Beispiel aus Abb. 13 und 25, unter "Operatoren und Ausdrücke"
+        int a = 0;
+        int b = 0;
+        System.out.println((a+b));
+        a++;
+        System.out.println(a);
+        b--;
+        System.out.println(b);
+        System.out.println((a%b));
+        System.out.println((a/b));
+
+        boolean istKundeGleich = kunde1 == kunde2;
+        System.out.println(istKundeGleich);
+
+         // Tabelle 15,... bis zu Abb 27 übersprungen aus logischen Gründen
     }
 }
