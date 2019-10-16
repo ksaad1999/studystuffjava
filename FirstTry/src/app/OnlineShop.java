@@ -4,21 +4,25 @@ package app;
 // Aufgabe fürs Studium :D
 public class OnlineShop {
     public static void main(String[] args) throws Exception {
-        //Aufg. Abb 21 Frage 3. unter "Main Methode Java"
-        Kunde k1 = new Kunde();
-        Kunde k2 = new Kunde();
+        //Aufg. Frage 4. unter "Main Methode Java"
+        Kunde kunde1 = new Kunde();
+		kunde1.setName("Lange");
+		kunde1.setVorname("Gerd");
+		kunde1.setGeburtsdatum("1967-10-23");
+		kunde1.setGeschlecht("m");
 
-        k1.setName("Lange");
-        k1.setVorname("Gerd");
+		Kunde kunde2 = new Kunde();
+		kunde2.setName("Koch");
+		kunde2.setVorname("Franz");
+		kunde2.setGeburtsdatum("1983-04-13");
+		kunde2.setGeschlecht("m");
 
-        k2.setName("Koch");
-        k2.setVorname("Franz");
+		System.out.println(kunde1.getName());
 
-        System.out.println(k1.getName());
-        k1.setName("Mueller");
+		kunde1.setName("Mueller");
 
-        System.out.println(k1.getName());
-        System.out.println(k2.getName());
+		System.out.println(kunde1.getName());
+		System.out.println(kunde2.getName());
 
     }
 }
