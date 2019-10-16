@@ -7,6 +7,12 @@ public class Kunde {
     private String geburtsdatum; // ich glaube das sollte eigentlich Date sein, aber egal
     private String geschlecht; //...
 
+    // Erweiterung in OOP Abb 27 "Kontrollstrukturen"
+    private boolean premiumkunde;
+
+    //Erweiterung in OOP Abb 30 "Kontrollstrukturen"
+    private boolean gutschein;
+
     public void setName(String name){
         this.name = name;
     }
@@ -33,5 +39,21 @@ public class Kunde {
     }
     public String getGeschlecht(){
        return this.geschlecht;
+    }
+
+    // Implementierung Abb 27 "Kontrollstrukturen"
+    public boolean isPremiumkunde(){
+        return this.premiumkunde;
+    }
+    public void setPremiumKunde(boolean status){
+        this.premiumkunde = status;
+    }
+
+    // Implementierung Abb 30 "Kontrollstrukturen"
+    public boolean hasGutschein(){
+        return this.gutschein;
+    }
+    public void setGutschein(boolean gutschein){
+        this.gutschein = gutschein;
     }
 }
