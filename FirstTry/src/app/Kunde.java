@@ -56,4 +56,11 @@ public class Kunde {
     public void setGutschein(boolean gutschein){
         this.gutschein = gutschein;
     }
+
+    // Implementierung Abb 32 Jugendschutz (ist Person über 18)
+    public String pruefeAltersfreigabe(int alter){
+        if(alter >= 18)return "Person ist volljährig";
+        if(alter >= 16)return "Person ist nicht volljähirg aber min. 16 Jahre alt";
+        return "Person ist nicht volljährig und jünger als 16 Jahre";
+    }
 }

@@ -55,5 +55,13 @@ public class OnlineShop {
         System.out.println(istKundeGleich);
 
          // Tabelle 15,... bis zu Abb 27 übersprungen aus logischen Gründen
+
+
+         //Implementierungen aus Abb 34 "Kontrollstrukturen"
+         int i=-10;
+         do {
+             System.out.println(i);
+            i++;
+         } while (i < 0);
     }
 }
