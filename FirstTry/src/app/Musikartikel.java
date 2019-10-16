@@ -1,7 +1,8 @@
 package app;
 
 public class Musikartikel extends Artikel {
-    public String interpret;
+    //Implementierung OOP Grundkurs 
+    private String interpret;
 
     public String getInterpret(){
         return this.interpret;

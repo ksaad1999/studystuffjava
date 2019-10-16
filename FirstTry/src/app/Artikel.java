@@ -1,9 +1,10 @@
 package app;
 
 public class Artikel {
-    public String hersteller;
-    public String titel;
-    public String artikelnummer;
+    //Implementierung OOP Grundkurs 
+    private String hersteller;
+    private String titel;
+    private String artikelnummer;
 
     public String getHersteller() {
         return this.hersteller;

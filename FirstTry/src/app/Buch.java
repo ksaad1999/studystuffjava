@@ -1,7 +1,8 @@
 package app;
 
 public class Buch extends Artikel {
-    public String autor;
+    //Implementierung OOP Grundkurs 
+    private String autor;
 
     public String getAutor(){
         return this.autor;
