@@ -27,4 +27,8 @@ public class Artikel {
         this.artikelnummer = artikelnummer;
     }
 
+    public String getBeschreibung()
+    {
+        return this.artikelnummer + ", " + this.hersteller + ", " + titel;
+    }
 }

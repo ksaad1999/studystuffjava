@@ -10,4 +10,8 @@ public class Buch extends Artikel {
     public void setAutor(String autor){
         this.autor = autor;
     }
+
+    public String getBeschreibung(){
+        return super.getBeschreibung() + "; " + autor;
+    }
 }

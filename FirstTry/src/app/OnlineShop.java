@@ -1,5 +1,9 @@
 package app;
 
+// import abstrakt;
+import app.abstrakt.AbstraktBuch;
+import app.abstrakt.AbstrakterArtikel;
+
 // Soll mal einen Shop repräsentieren in Java :/ 
 // Aufgabe fürs Studium :D
 public class OnlineShop {
@@ -63,5 +67,17 @@ public class OnlineShop {
              System.out.println(i);
             i++;
          } while (i < 0);
+
+         //Super implementierung Abb 54 Zugriff auf Imp. durch Oberklasse super "Programmierung von Vererbungen in Java"
+         Buch buch = new Buch();
+         buch.setArtikelnummer("ISBN 0002323255621321321321"); // It's just fun here, not a real implementation, so I can do that ;-)
+         buch.setAutor("hi");
+         System.out.println(buch.getBeschreibung());
+
+
+         
+        // Implementierung Abb 60 "Deklaration von Variablen des Typs einer abstrakten Klasse" unter "Abstrakte Klassen" - "Wichtige oo Konzepte"
+         AbstrakterArtikel abstrakterArtikel = new AbstraktBuch();
+         System.out.println(abstrakterArtikel.getTwitterBeschreibung());
     }
 }
