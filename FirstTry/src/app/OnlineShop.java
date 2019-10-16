@@ -32,5 +32,11 @@ public class OnlineShop {
         System.out.println(kunde2.getName());
         System.out.println(kunde2.getGeschlecht());
         System.out.println(kunde2.getGeburtsdatum());
+
+        // Aufgabe 10 unter "Variablen"
+        int jahr = 1989;
+        float aktienkurs = 462.23f;
+        boolean istGeprueft = true;
+        String name = "Schulz";
     }
 }
