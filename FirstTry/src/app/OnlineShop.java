@@ -27,10 +27,10 @@ public class OnlineShop {
 
         // Aufg 5 unter "Main Methode Java..."
         System.out.println(kunde1.getName());
-		System.out.println(kunde1.getGeschlecht());
-		System.out.println(kunde1.getGeburtsdatum());
-		System.out.println(kunde2.getName());
-		System.out.println(kunde2.getGeschlecht());
-		System.out.println(kunde2.getGeburtsdatum());
+        System.out.println(kunde1.getGeschlecht());
+        System.out.println(kunde1.getGeburtsdatum());
+        System.out.println(kunde2.getName());
+        System.out.println(kunde2.getGeschlecht());
+        System.out.println(kunde2.getGeburtsdatum());
     }
 }
