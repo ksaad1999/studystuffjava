@@ -74,10 +74,10 @@ public class OnlineShop {
          buch.setAutor("hi");
          System.out.println(buch.getBeschreibung());
 
-
-         
         // Implementierung Abb 60 "Deklaration von Variablen des Typs einer abstrakten Klasse" unter "Abstrakte Klassen" - "Wichtige oo Konzepte"
          AbstrakterArtikel abstrakterArtikel = new AbstraktBuch();
          System.out.println(abstrakterArtikel.getTwitterBeschreibung());
+         System.out.println(AbstrakterArtikel.checkArtikelNummer("252")); // Implementierung Abb 65 unter "Statische Methoden u. Attribute"
+         System.out.println((abstrakterArtikel instanceof AbstraktBuch)); // Implementierung Abb 63 Verwendung des instaceof-Operators
     }
 }
