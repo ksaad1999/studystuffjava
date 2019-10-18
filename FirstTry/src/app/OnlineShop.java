@@ -79,5 +79,18 @@ public class OnlineShop {
          System.out.println(abstrakterArtikel.getTwitterBeschreibung());
          System.out.println(AbstrakterArtikel.checkArtikelNummer("252")); // Implementierung Abb 65 unter "Statische Methoden u. Attribute"
          System.out.println((abstrakterArtikel instanceof AbstraktBuch)); // Implementierung Abb 63 Verwendung des instaceof-Operators
+
+         //Implementierung Abb Auto -> Hersteller "Der Standard-Konstruktur" Aufg 5
+         Hersteller hersteller = new Hersteller();
+         System.out.println(hersteller.getName());
+
+         Auto auto = new Auto();
+         System.out.println(auto.getModell());
+
+         //Implementierung "Konstruktoren zur Erzeugung von Obj" Aufg 9 "Überladen von Konstruktoren"
+         Auto auto2 = new Auto("Mustanananan", 0f, 2, 4);
+         String mod = auto2.getModell();
+         System.out.println(mod);
+
     }
 }
