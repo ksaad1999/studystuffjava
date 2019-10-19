@@ -125,9 +125,22 @@ public class OnlineShop {
         
         //Impl 68 "Eigene Exceptions"
         try {
-            int nk = 1/0;
-        } catch(Exception ex) {
-            throw new TestException("Test");
+            try {
+                //int nk = 1/0;
+            } catch(Exception ex) {
+                throw new TestException("Test");
+            }
+        } finally {
+            
+        }
+
+        //impl Aufg 3 "Eigene Exceptions"
+        Kunde kn2 = new Kunde();
+        kn2.setGeschlecht("l");
+        try {
+            kn2.getGeschlecht();
+        } catch (UngueltigesGeschlecht ex) {
+            System.out.println(ex.toString());
         }
     }
 }
