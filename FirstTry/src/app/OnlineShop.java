@@ -7,6 +7,13 @@ import app.abstrakt.AbstrakterArtikel;
 // Soll mal einen Shop repräsentieren in Java :/ 
 // Aufgabe fürs Studium :D
 public class OnlineShop {
+
+    //Impl. 82-84 "Standard Exceptions in Java"
+    public static float ZeigeStatistik(int a, int b) throws ArithmeticException
+    {
+        return a/b;
+    }
+
     public static void main(String[] args) throws Exception {
         //Aufg. Frage 4. unter "Main Methode Java"
         Kunde kunde1 = new Kunde();
@@ -92,5 +99,14 @@ public class OnlineShop {
          String mod = auto2.getModell();
          System.out.println(mod);
 
+        
+        // Impl. 82-84 "Standard Exceptions in Java"
+        try {
+            System.out.println(ZeigeStatistik(1,0));
+        } catch (ArithmeticException ex){
+            System.out.println("ERROR");
+        } finally {
+            System.out.println("LOL");
+        }
     }
 }
