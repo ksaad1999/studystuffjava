@@ -38,7 +38,10 @@ public class Kunde {
         this.geschlecht = geschlecht;
     }
     public String getGeschlecht(){
-       return this.geschlecht;
+        if(this.geschlecht == null)return "null"; // Implementierung "Typische Szenarien bei der Ausnahmebehandlung" Aufg 3 
+        if(this.geschlecht.isEmpty())return "empty"; // Implementierung "Typische Szenarien bei der Ausnahmebehandlung" Aufg 3
+        if(this.geschlecht != "m" && this.geschlecht != "w" && this.geschlecht != "d")return "undefined"; // Implementierung "Typische Szenarien bei der Ausnahmebehandlung" Aufg 3
+        return this.geschlecht;
     }
 
     // Implementierung Abb 27 "Kontrollstrukturen"
@@ -63,4 +66,5 @@ public class Kunde {
         if(alter >= 16)return "Person ist nicht volljähirg aber min. 16 Jahre alt";
         return "Person ist nicht volljährig und jünger als 16 Jahre";
     }
+    
 }
