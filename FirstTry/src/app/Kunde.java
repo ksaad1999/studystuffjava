@@ -1,5 +1,7 @@
 package app;
 
+import java.util.EmptyStackException;
+
 public class Kunde {
     // Implementierung in nach Abb 17 (Aufg 9 unter "Methoden in Java ") Webreader
     private String name;
@@ -37,10 +39,10 @@ public class Kunde {
     public void setGeschlecht(String geschlecht){
         this.geschlecht = geschlecht;
     }
-    public String getGeschlecht(){
-        if(this.geschlecht == null)return "null"; // Implementierung "Typische Szenarien bei der Ausnahmebehandlung" Aufg 3 
-        if(this.geschlecht.isEmpty())return "empty"; // Implementierung "Typische Szenarien bei der Ausnahmebehandlung" Aufg 3
-        if(this.geschlecht != "m" && this.geschlecht != "w" && this.geschlecht != "d")return "undefined"; // Implementierung "Typische Szenarien bei der Ausnahmebehandlung" Aufg 3
+    public String getGeschlecht() throws UngueltigesGeschlecht {
+        if(this.geschlecht == null)throw new NullPointerException(); // Implementierung "Typische Szenarien bei der Ausnahmebehandlung" Aufg 3 && Impl Definition eigene Exceptions Aufg 3 
+        if(this.geschlecht.isEmpty())throw new EmptyStackException(); // Implementierung "Typische Szenarien bei der Ausnahmebehandlung" Aufg 3 && Impl Definition eigene Exceptions Aufg 3
+        if(this.geschlecht != "m" && this.geschlecht != "w" && this.geschlecht != "d")throw new UngueltigesGeschlecht(); // Implementierung "Typische Szenarien bei der Ausnahmebehandlung" Aufg 3 && Impl Definition eigene Exceptions Aufg 3
         return this.geschlecht;
     }
 
