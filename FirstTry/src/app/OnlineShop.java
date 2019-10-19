@@ -136,7 +136,7 @@ public class OnlineShop {
 
         //impl Aufg 3 "Eigene Exceptions"
         Kunde kn2 = new Kunde();
-        kn2.setGeschlecht("l");
+        kn2.setGeschlecht("m");
         try {
             kn2.getGeschlecht();
         } catch (UngueltigesGeschlecht ex) {
