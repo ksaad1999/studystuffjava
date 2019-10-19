@@ -14,6 +14,15 @@ public class OnlineShop {
         return a/b;
     }
 
+    // impl 83 throws spezifischere Exception
+    public static float EigeneStatistik(int a, int b) throws ArithmeticException {
+        try {
+            return a/b;
+        } catch (ArithmeticException ex) {
+            throw new ArithmeticException("Kuchen");
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         //Aufg. Frage 4. unter "Main Methode Java"
         Kunde kunde1 = new Kunde();
@@ -107,6 +116,18 @@ public class OnlineShop {
             System.out.println("ERROR");
         } finally {
             System.out.println("LOL");
+        }
+
+
+        // impl 83 throws spezifischere Exception
+        System.out.println(EigeneStatistik(2,1));
+
+        
+        //Impl 68 "Eigene Exceptions"
+        try {
+            int nk = 1/0;
+        } catch(Exception ex) {
+            throw new TestException("Test");
         }
     }
 }
