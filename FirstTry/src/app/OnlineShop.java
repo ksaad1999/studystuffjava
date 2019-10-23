@@ -47,7 +47,7 @@ public class OnlineShop {
         }
         return thash + "_" + randomChain;
     }
-    
+
     //Impl. 82-84 "Standard Exceptions in Java"
     public static float ZeigeStatistik(int a, int b) throws ArithmeticException
     {
@@ -188,6 +188,9 @@ public class OnlineShop {
         ekelhafterWarkenkorb.put(badHash("t3est"), "test2");
         System.out.println(ekelhafterWarkenkorb.toString());
 
+        // Reading From File
+        String text = FileManager.readTextFromFile("B:/ksaad.sql");
+        System.out.println(text);
 
     }
 }
