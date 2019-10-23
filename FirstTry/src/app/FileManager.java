@@ -14,7 +14,7 @@ public class FileManager {
      * @param path full path 2 file
      * @return boolean fileexists?
      */
-    public static boolean FileExists(String path){
+    public static boolean fileExists(String path){
         File file = new File(path);
         return file.exists();
     }
