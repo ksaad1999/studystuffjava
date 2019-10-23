@@ -11,15 +11,15 @@ import app.abstrakt.AbstrakterArtikel;
 // Soll mal einen Shop repräsentieren in Java :/ 
 // Aufgabe fürs Studium :D
 public class OnlineShop {
-    private static Random randomGenerator = new Random();
-    private static HashMap<String,String> ekelhafterWarkenkorb = new HashMap<String, String>();
+    private static Random RANDOM_GENERATOR = new Random();
+    private static HashMap<String,String> EKELHAFTER_WARKENKORB = new HashMap<String, String>();
 
     /**
      * Generates a random char by randomGenerator
      * @return a random char
      */
     public static char getRandomChar(){
-        int numericValue = 	randomGenerator.nextInt(50) + randomGenerator.nextInt(20) + + randomGenerator.nextInt(65);
+        int numericValue = 	RANDOM_GENERATOR.nextInt(50) + RANDOM_GENERATOR.nextInt(20) + RANDOM_GENERATOR.nextInt(65);
         System.out.println("Num: " + numericValue);
         return (char) numericValue;
     }
@@ -184,9 +184,9 @@ public class OnlineShop {
         }
 
         // HashMap imp
-        ekelhafterWarkenkorb.put(badHash("test"), "test");
-        ekelhafterWarkenkorb.put(badHash("t3est"), "test2");
-        System.out.println(ekelhafterWarkenkorb.toString());
+        EKELHAFTER_WARKENKORB.put(badHash("test"), "test");
+        EKELHAFTER_WARKENKORB.put(badHash("t3est"), "test2");
+        System.out.println(EKELHAFTER_WARKENKORB.toString());
 
         // Reading From File
         String text = FileManager.readTextFromFile("B:/ksaad.sql");
