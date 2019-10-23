@@ -1,5 +1,9 @@
 package app;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
 // import abstrakt;
 import app.abstrakt.AbstraktBuch;
 import app.abstrakt.AbstrakterArtikel;
@@ -7,7 +11,43 @@ import app.abstrakt.AbstrakterArtikel;
 // Soll mal einen Shop repräsentieren in Java :/ 
 // Aufgabe fürs Studium :D
 public class OnlineShop {
+    private static Random randomGenerator = new Random();
+    private static HashMap<String,String> ekelhafterWarkenkorb = new HashMap<String, String>();
 
+    /**
+     * Generates a random char by randomGenerator
+     * @return a random char
+     */
+    public static char getRandomChar(){
+        int numericValue = 	randomGenerator.nextInt(50) + randomGenerator.nextInt(20) + + randomGenerator.nextInt(65);
+        System.out.println("Num: " + numericValue);
+        return (char) numericValue;
+    }
+
+    /** 
+     * Bad Hash not for real hashing
+     * @params t - String input to hash
+     */
+    public static String badHash(String t){
+        String thash = "";
+        int l = t.length();
+        l = (int) Math.random() * l;
+        for (int i=0; i < t.length()-1; i++) {
+            if(i > 0 && i < t.length()-1) {
+                thash += t.charAt((t.length()-1) - (i+1));
+            } else if (i > 5 && i < t.length()-1) {
+                thash += t.charAt((t.length()-1) - (i-2));
+            } else {
+                thash += t.charAt(i);
+            }
+        }
+        String randomChain = "";
+        for (int i=0; i < 4; i++) {
+            randomChain += getRandomChar();
+        }
+        return thash + "_" + randomChain;
+    }
+    
     //Impl. 82-84 "Standard Exceptions in Java"
     public static float ZeigeStatistik(int a, int b) throws ArithmeticException
     {
@@ -142,5 +182,12 @@ public class OnlineShop {
         } catch (UngueltigesGeschlecht ex) {
             System.out.println(ex.toString());
         }
+
+        // HashMap imp
+        ekelhafterWarkenkorb.put(badHash("test"), "test");
+        ekelhafterWarkenkorb.put(badHash("t3est"), "test2");
+        System.out.println(ekelhafterWarkenkorb.toString());
+
+
     }
 }
