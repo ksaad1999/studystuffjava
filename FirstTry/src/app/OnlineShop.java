@@ -1,15 +1,17 @@
 package app;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 
 // import abstrakt;
 import app.abstrakt.AbstraktBuch;
 import app.abstrakt.AbstrakterArtikel;
 
-// Soll mal einen Shop repräsentieren in Java :/ 
-// Aufgabe fürs Studium :D
+/**
+ * Task for the university
+ * Implementation of eCommerce Shop, but not a a real one, it's just a demo project for the university without servlets etc.
+ * @author Karim Saad
+ */
 public class OnlineShop {
     private static Random RANDOM_GENERATOR = new Random();
     private static HashMap<String,String> EKELHAFTER_WARKENKORB = new HashMap<String, String>();
@@ -24,9 +26,10 @@ public class OnlineShop {
         return (char) numericValue;
     }
 
-    /** 
-     * Bad Hash not for real hashing
-     * @params t - String input to hash
+    /**
+     * badHash Method, generates a badHash.
+     * @param t Input String e.g. Text
+     * @return String Badhash
      */
     public static String badHash(String t){
         String thash = "";
@@ -48,14 +51,28 @@ public class OnlineShop {
         return thash + "_" + randomChain;
     }
 
-    //Impl. 82-84 "Standard Exceptions in Java"
-    public static float ZeigeStatistik(int a, int b) throws ArithmeticException
+    /**
+     * Division between a, b
+     * Impl. 82-84 "Standard Exceptions in Java"
+     * @param a First INput (Dividend)
+     * @param b Second Input (Divisor)
+     * @return Quotient val of a,b as Float
+     * @throws ArithmeticException
+     */
+    public static float zeigeStatistik(int a, int b) throws ArithmeticException
     {
         return a/b;
     }
 
-    // impl 83 throws spezifischere Exception
-    public static float EigeneStatistik(int a, int b) throws ArithmeticException {
+    /**
+     * impl 83 throws specific Exception message
+     * Division between a, b with try/catch
+     * @param a Divisor
+     * @param b Dividend
+     * @return Quotient val as float of a,b
+     * @throws ArithmeticException
+     */
+    public static float eigeneStatistik(int a, int b) throws ArithmeticException {
         try {
             return a/b;
         } catch (ArithmeticException ex) {
@@ -93,14 +110,14 @@ public class OnlineShop {
         System.out.println(kunde2.getGeschlecht());
         System.out.println(kunde2.getGeburtsdatum());
 
-        // Aufgabe 10 unter "Variablen"
+        // Task 10 below "Variablen"
         int jahr = 1989;
         float aktienkurs = 462.23f;
         boolean istGeprueft = true;
         String name = "Schulz";
 
 
-        //Code Beispiel aus Abb. 13 und 25, unter "Operatoren und Ausdrücke"
+        //Abb. 13 und 25, below  "Operatoren und Ausdrücke"
         int a = 0;
         int b = 0;
         System.out.println((a+b));
@@ -151,7 +168,7 @@ public class OnlineShop {
         
         // Impl. 82-84 "Standard Exceptions in Java"
         try {
-            System.out.println(ZeigeStatistik(1,0));
+            System.out.println(zeigeStatistik(1,0));
         } catch (ArithmeticException ex){
             System.out.println("ERROR");
         } finally {
@@ -160,7 +177,7 @@ public class OnlineShop {
 
 
         // impl 83 throws spezifischere Exception
-        System.out.println(EigeneStatistik(2,1));
+        System.out.println(eigeneStatistik(2,1));
 
         
         //Impl 68 "Eigene Exceptions"

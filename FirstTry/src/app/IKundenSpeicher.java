@@ -1,6 +1,10 @@
 package app;
 
-//Abb 95 Einsatz, Definition und Implementierung eines Interfaces im Online-Shop
+/**
+ * Interface for customer storage
+ * Abb 95 Einsatz, Definition und Implementierung eines Interfaces im Online-Shop
+ * @author Karim Saad
+ */
 public interface IKundenSpeicher  {
     public void neu(Kunde k);
     public Kunde laden(int kundenNr);

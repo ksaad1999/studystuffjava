@@ -1,6 +1,10 @@
 package app;
 
-//Abb 95 Einsatz, Definition und Implementierung eines Interfaces im Online-Shop
+/**
+ * Implementation of DBKundenspeicher / DBCUstomerStorage
+ * Abb 95 Einsatz, Definition und Implementierung eines Interfaces im Online-Shop
+ * @author Karim Saad
+ */
 public class DBKundenSpeicher implements IKundenSpeicher {
 
     

@@ -1,34 +1,69 @@
 package app;
 
+/**
+ * Implementierung OOP Grundkurs 
+ * Article class
+ * @author Karim Saad
+ */
 public class Artikel {
-    //Implementierung OOP Grundkurs 
     private String hersteller;
     private String titel;
-    private String artikelnummer;
+    private String artikelNummer;
 
+    /**
+     * Gets the Manufacturer / Hersteller
+     * @return
+     */
     public String getHersteller() {
         return this.hersteller;
     }
+    
+    /**
+     * Sets the Hersteller / Manufacturer
+     * @param hersteller
+     */
     public void setHersteller(String hersteller){
         this.hersteller = hersteller;
     }
 
+    /**
+     * Gets the title
+     * @return String title
+     */
     public String getTitel() {
         return this.titel;
     }
+
+    /**
+     * Sets the title
+     * @param titel as String
+     */
     public void setTitel(String titel) {
         this.titel = titel;
     }
 
-    public String getArtikelnummer() {
-        return this.artikelnummer;
-    }
-    public void setArtikelnummer(String artikelnummer){
-        this.artikelnummer = artikelnummer;
+    /**
+     * Gets the articleNumber
+     * @return String articleNumber
+     */
+    public String getArtikelNummer() {
+        return this.artikelNummer;
     }
 
+    /**
+     * Sets the articleNumber
+     * @param artikelNummer
+     */
+    public void setArtikelNummer(String artikelNummer){
+        this.artikelNummer = artikelNummer;
+    }
+
+    /**
+     * Gets the description
+     * @return Description as String
+     */
     public String getBeschreibung()
     {
-        return this.artikelnummer + ", " + this.hersteller + ", " + titel;
+        return this.artikelNummer + ", " + this.hersteller + ", " + titel;
     }
 }

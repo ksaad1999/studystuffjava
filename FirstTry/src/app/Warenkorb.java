@@ -1,11 +1,20 @@
 package app;
 
-// Lernzyklus "Kontrollstrukturen" OOP Grundkurs, Abb 27
+/**
+ * Shopping Cart Impl.
+ * Lernzyklus "Kontrollstrukturen" OOP Grundkurs, Abb 27
+ * @author Karim Saad
+ */
 public class Warenkorb {
     private float anzahlArtikel;
     private float artikelSumme;
     private boolean gutscheinEingeloest;
 
+    /**
+     * Calculates a sum based on business rules by task of the university
+     * @param k Kunde customer
+     * @return Price as float
+     */
     public float berechneSumme(Kunde k){
         if(k.isPremiumkunde()) {
             if(anzahlArtikel > 3){

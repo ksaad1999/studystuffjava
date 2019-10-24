@@ -4,6 +4,7 @@ import java.io.*;
 
 /**
  * Class for FileManagement
+ * Primitive FileManagement
  * @author Karim Saad
  */
 
