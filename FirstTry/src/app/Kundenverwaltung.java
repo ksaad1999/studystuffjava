@@ -6,7 +6,30 @@ package app;
  * @author Karim Saad
  */
 public class Kundenverwaltung {
-    private IKundenSpeicher kundenSpeicher = new DBKundenSpeicher();
+    private String kundenVerwaltungPfad = "";
+    private IKundenSpeicher kundenSpeicher;
+
+    public Kundenverwaltung(String pfad){
+        this.kundenVerwaltungPfad = pfad;
+        this.kundenSpeicher = new DBKundenSpeicher(pfad);
+    }
+
+    /**
+     * Sets the customer directory path
+     * @param pfad
+     */
+    public void setKundenVerwaltungPfad(String pfad){
+        this.kundenVerwaltungPfad = pfad;
+        this.kundenSpeicher = new DBKundenSpeicher(pfad);
+    }
+
+    /**
+     * Returns the customer directory path
+     * @return
+     */
+    public String getKundenVerwaltungPfad(){
+        return this.kundenVerwaltungPfad;
+    }
 
     /**
      * Creates a customer
@@ -15,5 +38,20 @@ public class Kundenverwaltung {
     public void addKunde(Kunde k){
         if(k==null)return;
         kundenSpeicher.neu(k);
+    }
+
+    /** Loads a Customer 
+     * @param kdNr customerNumber 
+    */
+    public Kunde getKunde(long kdNr){
+        return kundenSpeicher.laden(kdNr);
+    }
+
+    /**
+     * save Customer
+     * Writes content from memory to Storage by object k as Kunde
+     */
+    public void saveKunde(Kunde k){
+        kundenSpeicher.aktualisieren(k);
     }
 }

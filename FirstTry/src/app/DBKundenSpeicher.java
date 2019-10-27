@@ -21,18 +21,38 @@ import java.io.ObjectOutputStream;
  * @author Karim Saad
  */
 public class DBKundenSpeicher implements IKundenSpeicher {
+    private String dateiPfad="";
 
+    public DBKundenSpeicher(String dateiPfad) {
+        this.dateiPfad = dateiPfad;
+    }
+    /**
+     * creates a customer
+     * @param k Kunde
+     */
     public void neu(Kunde k) {
         // TODO Auto-generated method stub
         aktualisieren(k);
     }
 
-    
-    public Kunde laden(int kundenNr) {
+    /**
+     * Returns the full path preset with customerID in kundenNr
+     * @param kundenNr long
+     * @return
+     */
+    public String getKundePfad(long kundenNr){
+        return this.dateiPfad + kundenNr + ".data";
+    }
+
+    /**
+     * Loads a customer
+     * @param kundenNr  long Customer Number
+     */
+    public Kunde laden(long kundenNr) {
         // TODO Auto-generated method stub
         try {
-            String dateipfad = "kunden/" + kundenNr + ".data";
-            File datei = new File(dateipfad);
+            String pfad = getKundePfad(kundenNr);
+            File datei = new File(pfad);
 
             FileInputStream fInputStream = new FileInputStream(datei);
             byte[] data = fInputStream.readAllBytes();
@@ -48,14 +68,16 @@ public class DBKundenSpeicher implements IKundenSpeicher {
         return null;
     }
 
-    
+    /**
+     * update a customer (writing from memory object to storage)
+     * @param k Kunde
+     */
     public void aktualisieren(Kunde k) {
         // TODO Auto-generated method stub
         // TODO Auto-generated method stub
         try {
-            String dateipfad = "kunden/" + k.getKundenNr() + ".data";
-            File datei = new File(dateipfad);
-
+            String pfad = getKundePfad(k.getKundenNr());
+            File datei = new File(pfad);
             // Converting to Binary Array
             ByteArrayOutputStream binaryArrayStream = new ByteArrayOutputStream();
             ObjectOutput objStream = new ObjectOutputStream(binaryArrayStream);
@@ -72,8 +94,11 @@ public class DBKundenSpeicher implements IKundenSpeicher {
         }
     }
 
-    
-    public void loeschen(int kundenNr) {
+    /**
+     * Deletes a customer
+     * @param kundenNr long
+     *  */    
+    public void loeschen(long kundenNr) {
         // TODO Auto-generated method stub
         try {
             String dateipfad = "kunden/" + kundenNr + ".data";

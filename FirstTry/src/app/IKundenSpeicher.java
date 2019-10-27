@@ -7,7 +7,7 @@ package app;
  */
 public interface IKundenSpeicher  {
     public void neu(Kunde k);
-    public Kunde laden(int kundenNr);
+    public Kunde laden(long kundenNr);
     public void aktualisieren(Kunde k);
-    public void loeschen(int kundenNr);
+    public void loeschen(long kundenNr);
 }

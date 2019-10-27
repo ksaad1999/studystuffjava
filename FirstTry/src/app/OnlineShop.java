@@ -209,8 +209,13 @@ public class OnlineShop {
         String text = FileManager.readTextFromFile("B:/ksaad.sql");
         System.out.println(text);
 
-        Kundenverwaltung v = new Kundenverwaltung();
-        v.aktualisiereAlleKunden();
+        Kundenverwaltung v = new Kundenverwaltung("C:\\kunden\\");
+        Kunde k = new Kunde();
+        k.setName("Gustav");
+        k.setGeburtsdatum("21.11.1999");
+        Long n = Long.MAX_VALUE;
+        k.setKundenNr(Math.round(Math.random() * n));
+        v.addKunde(k);
 
     }
 }

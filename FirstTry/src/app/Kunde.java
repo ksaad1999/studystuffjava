@@ -1,18 +1,19 @@
 package app;
 
 import java.util.EmptyStackException;
+import java.io.Serializable;
 /***
  * Kunde class (Customer class) for UserManagement
  * Impl. Abb 17 study task
  * @author Karim saad
  */
-public class Kunde {
+public class Kunde implements Serializable {
     // Implementierung in nach Abb 17 (Aufg 9 unter "Methoden in Java ") Webreader
     private String name;
     private String vorname;
     private String geburtsdatum; // ich glaube das sollte eigentlich Date sein, aber egal
-    private String geschlecht; //...
-    private int kundenNr;
+    private String geschlecht; //...b
+    private long kundenNr;
 
     // Erweiterung in OOP Abb 27 "Kontrollstrukturen"
     private boolean premiumkunde;
@@ -136,10 +137,18 @@ public class Kunde {
     }
 
     /**
+     * Sets the customer ID / Kundennummer
+     * @param kundenNr int
+     * @return
+     */
+    public void setKundenNr(long kundenNr){
+        this.kundenNr = kundenNr;
+    }
+    /**
      * Returns the customer ID / Kundennummer
      * @return
      */
-    public int getKundenNr(){
+    public long getKundenNr(){
         return this.kundenNr;
     }
     
