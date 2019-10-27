@@ -143,7 +143,7 @@ public class OnlineShop {
 
          //Super implementierung Abb 54 Zugriff auf Imp. durch Oberklasse super "Programmierung von Vererbungen in Java"
          Buch buch = new Buch();
-         buch.setArtikelnummer("ISBN 0002323255621321321321"); // It's just fun here, not a real implementation, so I can do that ;-)
+         buch.setISBN("ISBN 0002323255621321321321"); // It's just fun here, not a real implementation, so I can do that ;-)
          buch.setAutor("hi");
          System.out.println(buch.getBeschreibung());
 
@@ -208,6 +208,9 @@ public class OnlineShop {
         // Reading From File
         String text = FileManager.readTextFromFile("B:/ksaad.sql");
         System.out.println(text);
+
+        Kundenverwaltung v = new Kundenverwaltung();
+        v.aktualisiereAlleKunden();
 
     }
 }

@@ -6,16 +6,14 @@ package app;
  * @author Karim Saad
  */
 public class Kundenverwaltung {
-    private Kunde k1;
-    private Kunde k2;
-
     private IKundenSpeicher kundenSpeicher = new DBKundenSpeicher();
 
     /**
-     * Update all customers (k1,k2)
+     * Creates a customer
+     * @param k
      */
-    public void aktualisiereAlleKunden(){
-        kundenSpeicher.aktualisieren(k1);
-        kundenSpeicher.aktualisieren(k2);
+    public void addKunde(Kunde k){
+        if(k==null)return;
+        kundenSpeicher.neu(k);
     }
 }

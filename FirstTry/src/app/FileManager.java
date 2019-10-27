@@ -28,7 +28,7 @@ public class FileManager {
      */
     public static String readTextFromFile (String path) throws IOException 
     {
-        if(!FileExists(path))return "Die Datei existiert nicht!";
+        if(!fileExists(path))return "Die Datei existiert nicht!";
         String gesamtText = "";
         FileReader fileReader = new FileReader(path);
         BufferedReader bufferedReader = new BufferedReader(fileReader);

@@ -7,6 +7,7 @@ package app;
 public class Buch extends Artikel {
     //Implementierung OOP Grundkurs 
     private String autor;
+    private String isbn;
 
     /**
      * Gets the author
@@ -30,5 +31,17 @@ public class Buch extends Artikel {
      */
     public String getBeschreibung(){
         return super.getBeschreibung() + "; " + autor;
+    }
+
+    public void setISBN(String isbn){
+        this.isbn = isbn;
+    }
+
+    /**
+     * Returns the article no of this book
+     * @return
+     */
+    public String setISBN(){
+        return this.isbn;
     }
 }
