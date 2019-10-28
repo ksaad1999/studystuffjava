@@ -30,8 +30,9 @@ public class DBKundenSpeicher implements IKundenSpeicher {
      * creates a customer
      * @param k Kunde
      */
-    public void neu(Kunde k) {
+    public void neu(Kunde k) throws IOException {
         // TODO Auto-generated method stub
+        if(new File(getKundePfad(k.getKundenNr())).exists())throw new IOException("File " + getKundePfad(k.getKundenNr()) + " already exists");
         aktualisieren(k);
     }
 

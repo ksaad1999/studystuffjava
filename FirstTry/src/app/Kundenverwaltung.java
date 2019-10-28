@@ -37,7 +37,11 @@ public class Kundenverwaltung {
      */
     public void addKunde(Kunde k){
         if(k==null)return;
-        kundenSpeicher.neu(k);
+        try {
+            kundenSpeicher.neu(k);
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
 
     /** Loads a Customer 

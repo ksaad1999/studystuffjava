@@ -1,5 +1,6 @@
 package app;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -214,8 +215,14 @@ public class OnlineShop {
         k.setName("Gustav");
         k.setGeburtsdatum("21.11.1999");
         Long n = Long.MAX_VALUE;
-        k.setKundenNr(Math.round(Math.random() * n));
+        k.setKundenNr(Math.round(Math.random() * n - Math.random()));
         v.addKunde(k);
 
+        // File System tasks
+        for(File x : FileManager.getWurzelVerzeichnisse()){
+            System.out.println(x.getName());
+        }
+
+        System.out.println("hi");
     }
 }

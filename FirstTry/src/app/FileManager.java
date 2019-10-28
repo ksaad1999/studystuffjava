@@ -41,4 +41,21 @@ public class FileManager {
         fileReader.close();
         return gesamtText;
     }
+
+    /**
+     * Returns the root directories
+     * @return
+     */
+    public static File[] getWurzelVerzeichnisse() {
+        return File.listRoots();
+    }
+
+    /**
+     * Returns all Files of a specific root dir
+     * @param datei File (the specific root dir)
+     * @return File[]
+     */
+    public static File[] getDateienInWurzelVerzeichniss(File datei) {
+        return datei.listFiles();
+    }
 }
